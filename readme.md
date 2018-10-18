@@ -1,6 +1,11 @@
 # Homework Assignment #1
-
 The first home work of [Pirple's](https://pirple.thinkific.com) Node.js course.
+### Requirements
+>
+> It should be a RESTful JSON API that listens on a port of your choice. 
+> 
+> When someone posts anything to the route /hello, you should return a welcome message, in JSON format. This message can be anything you want. 
+
 
 ### Contents of the assignment
 
