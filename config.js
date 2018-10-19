@@ -1,6 +1,8 @@
 /**
  * The application's configurations and routes
  */
+// Creating empty handler object
+const handler = {}
 // Creating the config object
 let config = {
     'port': 3000,
@@ -11,3 +13,6 @@ let config = {
         'notAllowed': handler.notAllowed
     }
 }
+
+module.exports = config;
+module.exports.handler;
