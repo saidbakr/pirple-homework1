@@ -7,11 +7,13 @@
  
  // The http object that creates and run the server. It is smple so we use http only without any https
  const http = require('http');
+ // The url object to parse requested URL
+ const url = require('url');
 
 
 
  // Creating the server
- const httpServer = http.createServer((req,res)=>{
+ const httpServer = http.createServer((req,res)=>{     
      // The app logic should defined in this object
      appLogic(req,res);
  });
@@ -22,6 +24,15 @@
  // The app logic
 
  let appLogic = (req, res) => {
+     // Getting the URL and parsing it
+     let parsedUrl = url.parse(req.url,true);
+     // Untimmed requested path
+     let crudPath = parsedUrl.pathname;
+     // Final trimmed path. Trime means remove any prefixed or suffixed slash / only
+     // Example: /the/path/ => the/path
+     let path = crudPath.replace(/^\/+|\/+$/g,'');
+     // Determine the HTTP method used in the request and set it in lower case.
+     let method = req.method.toLowerCase();
 
  }
 
