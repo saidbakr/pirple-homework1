@@ -16,6 +16,7 @@ The first home work of [Pirple's](https://pirple.thinkific.com) Node.js course.
 
  ```
  {
-     'msg': 'Welcome to our api'
+     'msg': 'Welcome to our api',
+     'method': 'GET'
  } 
  ```
